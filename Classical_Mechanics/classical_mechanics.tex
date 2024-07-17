@@ -23,12 +23,78 @@
 \begin{itemize}
     \item Position, $\bm{\vec{r}} = r\uvec{r}$
     
-    where, $\uvec{r} = cos\theta\uvec{i} + sin\theta\uvec{j}$ ,
+    where, $\uvec{r} = cos\theta\uvec{i} + sin\theta\uvec{j}$
     \item Velocity, $\bm{\vec{v}} = \dot{r}\uvec{r} + r\dot{\theta}\uvec{\theta}$
     
     where, $\uvec{\theta} = -sin\theta\uvec{i} + cos\theta\uvec{j}$
     \item Accelaration, $\bm{\vec{a}} = (\ddot{r} - r\dot{\theta}^2)\uvec{r} + (r\ddot{\theta} + 2\dot{r}\dot{\theta})\uvec{\theta}$
     \item Kinetic energy = $\frac{1}{2}m(\bm{\vec{v}\cdot\vec{v}}) = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2)$
+\end{itemize}
+
+\section{Common 3D coordinate systems}
+
+\subsection{Cartesian coordinate system}
+\begin{itemize}
+    \item Position, $\bm{\vec{r}} = x\uvec{i} + y\uvec{j} + z\uvec{k}$
+    \item Velocity, $\bm{\vec{v}} = \dot{x}\uvec{i} + \dot{y}\uvec{j} +\dot{z}\uvec{k}$
+    \item Accelaration, $\bm{\vec{a}} = \ddot{x}\uvec{i} + \ddot{y}\uvec{j} + \ddot{z}\uvec{k}$
+    \item Kinetic energy = $\frac{1}{2}m(\bm{\vec{v}\cdot\vec{v}}) = \frac{1}{2}m(\dot{x}^2 + \dot{y}^2 + \dot{z}^2)$
+\end{itemize}
+
+\subsection{Cylindrical coordinate system}
+\begin{itemize}
+    \item Cartesian coordinates in terms of Cylindrical coordinates,
+    \begin{center}
+        $x = rcos\phi,$ 
+        
+        $y = rsin\phi,$ 
+        
+        $z = z$
+    \end{center}
+    \item Transformation table for unit vectors:
+    \begin{center}
+    \begin{tabular}{ c | c | c | c}
+                   & $\uvec{r}$ & $\uvec{\phi}$ & $\uvec{z}$\\
+        \hline
+        $\uvec{i}$ & $cos\phi $ & $-sin\phi$ & 0\\
+        \hline  
+        $\uvec{j}$ & $sin\phi $ & $cos\phi$ & 0\\
+        \hline
+        $\uvec{k}$ & 0 & 0 & 1\\
+    \end{tabular}
+    \end{center}
+    \item Position, $\bm{\vec{r}} = r\uvec{r} + z\uvec{z}$
+    \item Velocity, $\bm{\vec{v}} = \dot{r}\uvec{r} + r\dot{\phi}\uvec{\phi} + \dot{z}\uvec{z}$
+    \item Accelaration, $\bm{\vec{a}} = (\ddot{r} - r\dot{\phi}^2)\uvec{r} + (r\ddot{\phi} + 2\dot{r}\dot{\phi})\uvec{\phi} + \ddot{z}\uvec{z}$
+    \item Kinetic energy = $\frac{1}{2}m(\bm{\vec{v}\cdot\vec{v}}) = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\phi}^2 + \dot{z}^2)$
+\end{itemize}
+
+\subsection{Spherical coordinate system}
+\begin{itemize}
+    \item Cartesian coordinates in terms of Spherical coordinates,
+    \begin{center}
+        $x = rsin\theta cos\phi,$ 
+        
+        $y = rsin\theta sin\phi,$ 
+        
+        $z = rcos\theta$
+    \end{center}
+    \item Transformation table for unit vectors:
+    \begin{center}
+    \begin{tabular}{ c | c | c | c}
+                   & $\uvec{r}$ & $\uvec{\theta}$ & $\uvec{\phi}$\\
+        \hline
+        $\uvec{i}$ & $sin\theta cos\phi $ & $cos\theta cos\phi$ & $-sin\phi$\\
+        \hline  
+        $\uvec{j}$ & $sin\theta sin\phi $ & $cos\theta sin\phi$ & $cos\phi$\\
+        \hline
+        $\uvec{k}$ & $cos\theta$ & $-sin\theta$ & 0\\
+    \end{tabular}
+    \end{center}
+    \item Position, $\bm{\vec{r}} = r\uvec{r}$
+    \item Velocity, $\bm{\vec{v}} = \dot{r}\uvec{r} + r\dot{\theta}\uvec{\theta} + rsin\theta\dot{\phi}\uvec{\phi}$
+    \item Accelaration, $\bm{\vec{a}} = (\ddot{r} - r\dot{\theta}^2 - rsin^2\theta\dot{\phi}^2)\uvec{r} + (r\ddot{\theta} + 2\dot{r}\dot{\theta} - rsin\theta cos\theta\dot{\phi}^2)\uvec{\theta} + (\dot{r}sin\theta\dot{\phi} + 2rcos\theta\dot{\theta}\dot{\phi} + rsin\theta\ddot{\phi})\uvec{\phi}$
+    \item Kinetic energy = $\frac{1}{2}m(\bm{\vec{v}\cdot\vec{v}}) = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\theta}^2 + r^2sin^2\theta\dot{\phi}^2)$
 \end{itemize}
 
 \newpage
@@ -48,5 +114,10 @@ Constraint can be divided in two categories:
 Generalized coordinates are a set of parameters used to represent the configuration of a system. Instead of using a particular 
 set of coordinates, we use generalized coordinates $(q_i)$ which may be cartesian, polar, angles, or various combinations of them.
 
-
+\newpage
+\section*{Calculus of variation}
+In calculus of variation we find a function or a curve, for which the given functional has a stationary value.
+\subsection*{Euler equation}
+ 
+$$S = \int_{x_1}^{x_2}f(y,\dot{y},x)dx $$
 \end{document}
